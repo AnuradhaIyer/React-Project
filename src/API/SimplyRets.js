@@ -34,13 +34,13 @@ const SimplyRets = () => {
 
     // Storing API Data to local storage 
     var dataToStore = JSON.stringify(data);
-    localStorage.setItem('someData', dataToStore);
+    localStorage.setItem('API Data', dataToStore);
     //Checking if User ID already exists if not create a new random number 
     UserID ? (localStorage.getItem('userID')) : localStorage.setItem('userID', randomNumber())
 
   return(
     <div>
- {localStorage.getItem('someData') ? <PropertyList setdata={JSON.parse(localStorage.getItem('someData'))}/> : errMessage }
+ {localStorage.getItem('API Data') ? <PropertyList setdata={JSON.parse(localStorage.getItem('API Data'))}/> : errMessage }
 
     </div>
     );
