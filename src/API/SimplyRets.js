@@ -9,7 +9,7 @@ const SimplyRets = () => {
     let errMessage =' No  Data '
     var UserID = Number(localStorage.getItem('userID'));
     const [hasError, setErrors] = useState(false);
-    const [data, setData] = useState({});
+    const [data, setData] = useState([]);
 
     //user ID random number genertor
     function randomNumber() {
@@ -40,7 +40,7 @@ const SimplyRets = () => {
 
   return(
     <div>
- {localStorage.getItem('API Data') ? <PropertyList setdata={JSON.parse(localStorage.getItem('API Data'))}/> : errMessage }
+ {localStorage.getItem('API Data') ? <PropertyList setdata={data}/> : errMessage }
 
     </div>
     );

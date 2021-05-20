@@ -35,7 +35,7 @@ const PropertyList = ({setdata}) => {
   return(
     <div className={classes.root}>
       <GridList cellWidth = {300} cellHeight={400} className={classes.gridList} cols={3}>
-            {setdata.map((data) => (
+            {setdata && setdata.map((data) => (
             <GridListTile key={data.img}>
               <img src={data.photos[0]} alt={data.title} />
             <GridListTileBar
