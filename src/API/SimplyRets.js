@@ -40,7 +40,7 @@ const SimplyRets = () => {
 
   return(
     <div>
- {localStorage.getItem('API Data') ? <PropertyList setdata={data}/> : errMessage }
+ {data ? <PropertyList setdata={data}/> : errMessage }
 
     </div>
     );
